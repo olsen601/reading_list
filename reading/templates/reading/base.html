@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Reading List</title>
+
+</head>
+
+<body>
+
+
+  <div class="navigation">
+    <span id='nav_bar'>
+      <a href="{% url 'reading:homepage' %}">Home</a>
+    </span>
+    <hr>
+  </div>
+
+  {% block content %}
+  {% endblock %}
+
+  {% if user.is_authenticated %}
+
+    <span id='user_name'>Logged in as <a href="{% url 'reading:user_profile' user_pk=user.pk %}">{{ user.username }}</a></span>
+    <span id='logout'><a href="{% url 'logout' %}">Logout</a></span>
+
+  {% else %}
+    <span id='login_or_sign_up'><a href="{% url 'login' %}?next={{ request.path }}">Login or Create Account</a></span>
+  {% endif %}
+
+</body>
+</html>
