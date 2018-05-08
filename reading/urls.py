@@ -11,7 +11,7 @@ urlpatterns = [
     path('', views.homepage, name='homepage'),
 
     #Genres
-    path('genres/', views_genres.genres, name='genres'),
+    path('user/<int:user_pk>/genres/', views_genres.genres_for_user, name='genres_for_user'),
 
     #Genre list
 

@@ -6,13 +6,17 @@
 
 <body>
 
-
-  <div class="navigation">
-    <span id='nav_bar'>
-      <a href="{% url 'reading:homepage' %}">Home</a>
-    </span>
-    <hr>
-  </div>
+  {% if user and user.is_authenticated %}
+    <div class="navigation">
+      <span id='nav_bar'>
+        <a href="{% url 'reading:homepage' %}">Home</a>
+        <a href="{% url 'reading:genres_for_user' user_pk=user.pk %}">Genres</a>
+      </span>
+      <hr>
+    </div>
+  {% else %}
+    <h3>Please sign in</h3>
+  {% endif %}
 
   {% block content %}
   {% endblock %}

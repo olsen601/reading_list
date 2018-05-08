@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 
-#TODO: import models
 from ..forms import NewUserForm
 
 from django.contrib.auth.decorators import login_required
