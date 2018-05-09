@@ -55,16 +55,24 @@ This is meant to be used with the reading_api repo.
           Next open a web browser and enter '127.0.0.1:8000/' the loopback address on port 8000.
 
           If all goes well your page should look like the following image.
+   
    ![Alt text](screenShots/Capture1.PNG)
 
-    Walk-through:
+
+ Walk-through:
+ 
           Click on the "Login or Create Account" hyperlink.
           Now you should see the following screen.
+   
    ![Alt text](screenShots/Capture2.PNG)
 
           Click the "Create an Account" hyperlink.
           Now you should see the following screen.
+          
    ![Alt text](screenShots/Capture3.PNG)
+   
           Fill in the required fields to create an account.
           After submission you will be automatically redirected to the home page and automatically logged in.
    ![Alt text](screenShots/Capture4.PNG)
+   
+   
